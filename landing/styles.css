@@ -1,0 +1,399 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: #fff;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section {
+    padding: 60px 0;
+}
+
+.logo {
+    width: 128px;
+    height: 128px;
+    object-fit: contain;
+    border-radius: 8px;
+    background-color: #f8f9fa;
+}
+
+/* Header */
+.header {
+    background: linear-gradient(135deg, #0070f3 0%, #1a202c 100%);
+    color: white;
+    padding: 80px 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="2" fill="rgba(255,255,255,0.1)"/></svg>') repeat;
+    animation: float 20s infinite linear;
+}
+
+@keyframes float {
+    0% { 
+        transform: translateY(0) translateX(0); 
+    }
+    100% { 
+        transform: translateY(-100px) translateX(100px); 
+    }
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.hero-meta {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    opacity: 0.9;
+    background: rgba(255,255,255,0.1);
+    padding: 10px 20px;
+    border-radius: 25px;
+    display: inline-block;
+}
+
+.hero-description {
+    font-size: 1.4rem;
+    margin-bottom: 40px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cta-button {
+    background: #ff6b6b;
+    color: white;
+    padding: 18px 35px;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(255, 107, 107, 0.4);
+    background: #ff5252;
+}
+
+.free-badge {
+    background: #4caf50;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+/* Course Overview */
+.overview {
+    background: #f8f9fa;
+}
+
+.overview-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.overview h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #2c3e50;
+}
+
+.overview p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+/* Feature Sections */
+.feature-section {
+    margin-bottom: 80px;
+}
+
+.feature-section h3 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #2c3e50;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.section-icon {
+    font-size: 1.5rem;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.feature-card {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    border-left: 4px solid #0070f3;
+}
+
+.feature-card:hover {
+    transform: translateY(-8px);
+}
+
+.feature-card h4 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    color: #0070f3;
+}
+
+/* Session Timeline */
+.session-timeline {
+    display: grid;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.session-item {
+    background: white;
+    border-left: 4px solid #0070f3;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+}
+
+.session-item:hover {
+    transform: translateX(10px);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+}
+
+.session-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.session-number {
+    background: linear-gradient(135deg, #0070f3, #1a202c);
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.session-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+.session-content ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.session-content li {
+    padding: 10px 0;
+    position: relative;
+    padding-left: 30px;
+    font-size: 1.1rem;
+}
+
+.session-content li::before {
+    content: "⚡";
+    position: absolute;
+    left: 0;
+    color: #0070f3;
+    font-weight: bold;
+}
+
+/* Target Audience Cards */
+.audience-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.audience-card {
+    background: linear-gradient(135deg, #0070f3, #1a202c);
+    color: white;
+    padding: 40px 30px;
+    border-radius: 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.audience-number {
+    font-size: 4rem;
+    font-weight: 700;
+    opacity: 0.2;
+    position: absolute;
+    top: 15px;
+    right: 25px;
+}
+
+.audience-card h4 {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    position: relative;
+    z-index: 2;
+}
+
+/* Why Next.js Section */
+.why-nextjs {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    text-align: center;
+}
+
+.paradigm-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.paradigm-card {
+    background: rgba(255,255,255,0.1);
+    padding: 25px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.2);
+}
+
+.paradigm-card.highlight {
+    background: rgba(255,255,255,0.2);
+    border: 2px solid rgba(255,255,255,0.4);
+}
+
+/* Instructor Section */
+.instructor {
+    background: #f8f9fa;
+}
+
+.instructor-content {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 40px;
+    align-items: center;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.instructor-photo {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0, 112, 243, 0.2);
+}
+
+.instructor-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.linkedin-link {
+    display: inline-block;
+    background: #0077b5;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    margin-top: 15px;
+    transition: background 0.3s ease;
+}
+
+.linkedin-link:hover {
+    background: #005885;
+}
+
+.instructor-bio h3 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+.instructor-bio .highlight {
+    background: #e3f2fd;
+    padding: 20px;
+    border-radius: 12px;
+    margin: 20px 0;
+    border-left: 4px solid #0070f3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .logo {
+        width: 120px;
+    }
+    
+    .instructor-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .feature-grid,
+    .audience-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .paradigm-cards {
+        grid-template-columns: 1fr;
+    }
+}
